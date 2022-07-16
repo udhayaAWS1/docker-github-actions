@@ -10,7 +10,7 @@ jobs:
    node-docker:
       runs-on: ubuntu-latest
       container:
-       image: node:alpine:14
+       image: node:alpine:fermium-alpine3.15
       steps:
         - name: log node version
           run: |
