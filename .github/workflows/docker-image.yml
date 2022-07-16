@@ -1,0 +1,18 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+   node-docker:
+      runs-on: ubuntu-latest
+      container:
+       image: node:alpine:14
+      steps:
+        - name: log node version
+          run: |
+            node -v
+            cat /etc/os-release
